@@ -79,6 +79,24 @@ namespace rx_demo_proj
 
             Init();
 
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'p.harshith444' with focus on 'ApplicationUnderTest'.", repo.ApplicationUnderTest.SelfInfo, new RecordItemIndex(0));
+            repo.ApplicationUnderTest.Self.EnsureVisible();
+            Keyboard.Press("p.harshith444");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'ApplicationUnderTest.VfPpkdRLmnJb' at 59;34.", repo.ApplicationUnderTest.VfPpkdRLmnJbInfo, new RecordItemIndex(1));
+            repo.ApplicationUnderTest.VfPpkdRLmnJb.Click("59;34");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'Marcus{LShiftKey down}~{LShiftKey up}7' with focus on 'ApplicationUnderTest'.", repo.ApplicationUnderTest.SelfInfo, new RecordItemIndex(2));
+            repo.ApplicationUnderTest.Self.EnsureVisible();
+            Keyboard.Press("Marcus{LShiftKey down}~{LShiftKey up}7");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'ApplicationUnderTest.VfPpkdRLmnJb1' at 63;28.", repo.ApplicationUnderTest.VfPpkdRLmnJb1Info, new RecordItemIndex(3));
+            repo.ApplicationUnderTest.VfPpkdRLmnJb1.Click("63;28");
+            Delay.Milliseconds(0);
+            
         }
 
 #region Image Feature Data

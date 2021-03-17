@@ -85,6 +85,8 @@ namespace rx_demo_proj
         [RepositoryFolder("0839f75d-bbf6-49e2-8ac8-99a4b4a577ee")]
         public partial class ApplicationUnderTestAppFolder : RepoGenBaseFolder
         {
+            RepoItemInfo _vfppkdrlmnjbInfo;
+            RepoItemInfo _vfppkdrlmnjb1Info;
 
             /// <summary>
             /// Creates a new ApplicationUnderTest  folder.
@@ -92,6 +94,8 @@ namespace rx_demo_proj
             public ApplicationUnderTestAppFolder(RepoGenBaseFolder parentFolder) :
                     base("ApplicationUnderTest", "/dom[@domain='accounts.google.com']", parentFolder, 30000, null, false, "0839f75d-bbf6-49e2-8ac8-99a4b4a577ee", "")
             {
+                _vfppkdrlmnjbInfo = new RepoItemInfo(this, "VfPpkdRLmnJb", ".//div[#'identifierNext']/?/?/button/div[2]", "", 30000, null, "ae580835-777a-4d88-8d00-30de963b6e6f");
+                _vfppkdrlmnjb1Info = new RepoItemInfo(this, "VfPpkdRLmnJb1", ".//div[#'passwordNext']/?/?/button/div[2]", "", 30000, null, "ab3c529b-252f-4937-8eff-137fa3ef82ef");
             }
 
             /// <summary>
@@ -115,6 +119,54 @@ namespace rx_demo_proj
                 get
                 {
                     return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The VfPpkdRLmnJb item.
+            /// </summary>
+            [RepositoryItem("ae580835-777a-4d88-8d00-30de963b6e6f")]
+            public virtual Ranorex.DivTag VfPpkdRLmnJb
+            {
+                get
+                {
+                    return _vfppkdrlmnjbInfo.CreateAdapter<Ranorex.DivTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The VfPpkdRLmnJb item info.
+            /// </summary>
+            [RepositoryItemInfo("ae580835-777a-4d88-8d00-30de963b6e6f")]
+            public virtual RepoItemInfo VfPpkdRLmnJbInfo
+            {
+                get
+                {
+                    return _vfppkdrlmnjbInfo;
+                }
+            }
+
+            /// <summary>
+            /// The VfPpkdRLmnJb1 item.
+            /// </summary>
+            [RepositoryItem("ab3c529b-252f-4937-8eff-137fa3ef82ef")]
+            public virtual Ranorex.DivTag VfPpkdRLmnJb1
+            {
+                get
+                {
+                    return _vfppkdrlmnjb1Info.CreateAdapter<Ranorex.DivTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The VfPpkdRLmnJb1 item info.
+            /// </summary>
+            [RepositoryItemInfo("ab3c529b-252f-4937-8eff-137fa3ef82ef")]
+            public virtual RepoItemInfo VfPpkdRLmnJb1Info
+            {
+                get
+                {
+                    return _vfppkdrlmnjb1Info;
                 }
             }
         }
